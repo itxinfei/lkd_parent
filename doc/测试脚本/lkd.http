@@ -1,0 +1,186 @@
+@hostname = lkd-java.itheima.net
+#lkd-java.itheima.net
+#47.92.101.139
+@port=9007
+@contentType=application/json
+
+@tokenValue=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJsa2QiLCJpYXQiOjE1NzUwMTkyMjgsInVzZXJOYW1lIjoi566h55CG5ZGYIiwidXNlcklkIjoxLCJyb2xlQ29kZSI6IjEwMDAiLCJjb21wYW55SWQiOjAsImV4cCI6MTU3NTAxOTIyOH0.Wtkzbne0zR72Ej_9v0U8S29gRnncw5vKn9g_pATwjKs
+
+####售货机服务
+GET  http://{{hostname}}:{{port}}/vmService/vm/listByStatus/1/10 HTTP/1.1
+token: {{tokenValue}}
+
+#######sku all
+GET  http://{{hostname}}:{{port}}/vmService/sku/all/1/10 HTTP/1.1
+token: {{tokenValue}}
+
+
+######vmInfo
+
+GET http://{{hostname}}:{{port}}/vmService/vm/vmInfo/037900004 HTTP/1.1
+token: {{tokenValue}}
+
+################skuList###########
+
+GET http://{{hostname}}:{{port}}/vmService/vm/skuList/037900004 HTTP/1.1
+token: {{tokenValue}}
+
+#######自动工单通知
+#GET  http://{{hostname}}:{{port}}/vmService/vm/inventory/70 HTTP/1.1
+GET  http://localhost:9004/vm/inventory/70 HTTP/1.1
+token: {{tokenValue}}
+
+####策略
+###获取所有策略
+GET  http://{{hostname}}:{{port}}/vmService/policy/all/1/10 HTTP/1.1
+token: {{tokenValue}}
+
+###搜索策略
+GET  http://{{hostname}}:{{port}}/vmService/policy/search/测试/1/10 HTTP/1.1
+token: {{tokenValue}}
+
+
+#登录请求
+@name=login
+
+
+######
+#用户服务
+
+### login##
+# POST http://{{hostname}}:{{port}}/api/userService/user/login HTTP/1.1
+POST http://{{hostname}}:{{port}}/userService/user/login HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+    "loginName":"admin",
+    "password":"admin"
+}
+
+#######
+
+##operatorList
+
+GET http://{{hostname}}:{{port}}/userService/user/operatorList
+token: {{tokenValue}}
+
+#####create company
+
+POST http://{{hostname}}:{{port}}/userService/company/create
+Content-Type: {{contentType}}
+token: {{tokenValue}}
+
+{
+    "id":0,
+    "businessType":1,
+    "name":"测试创建合作商",
+    "divide":5,
+    "enable":1,
+    "userName":"张三",
+    "mobile":"13511111111"
+}
+
+#####
+
+
+####order service#####
+POST http://{{hostname}}:{{port}}/orderService/order/all
+#POST http://{{hostname}}:{{port}}/order/all
+Content-Type: {{contentType}}
+token: {{tokenValue}}
+
+{
+    "pageIndex":1,
+    "pageSize":10,
+    "starDate":"2019-01-01T00:00:00",
+    "endDate":"2019-12-31T00:00:00"
+}
+
+#############
+##companyCollect
+GET  http://{{hostname}}:{{port}}/orderService/order/companyCollect/2019-01-01/2019-12-31
+token: {{tokenValue}}
+
+
+#############
+#####companyTrend
+
+GET  http://{{hostname}}:{{port}}/orderService/order/companyTrend/1/2019-01-01/2019-12-31
+token: {{tokenValue}}
+
+
+#######
+###bill
+GET  http://{{hostname}}:{{port}}/orderService/order/bill/1/2019-01-01/2019-12-31
+#localhost test
+# GET  http://localhost:9008/order/bill/1/2019-01-01/2019-12-31
+token: {{tokenValue}}
+
+
+####################
+####all
+POST http://{{hostname}}:{{port}}/orderService/order/all
+#POST http://localhost:9008/order/all
+Content-Type: {{contentType}}
+token: {{tokenValue}}
+
+{
+    "pageIndex":1,
+    "pageSize":10,
+    "starDate":"2019-01-01T00:00:00",
+    "endDate":"2019-12-31T00:00:00"
+}
+
+######
+#status
+######all
+GET http://{{hostname}}:{{port}}/statusService/status/all/1/10
+token: {{tokenValue}}
+
+################
+#trouble
+GET http://{{hostname}}:{{port}}/statusService/status/trouble/1/10
+token: {{tokenValue}}
+
+
+################工单服务
+
+####################
+####自动补货工单
+POST http://{{hostname}}:{{port}}/taskService/task/autoSupplyConfig
+#POST http://localhost:9005/task/autoSupplyConfig
+Content-Type: {{contentType}}
+token: {{tokenValue}}
+
+{
+    "alertValue": 50,
+    "hour": 9
+}
+
+#############手动补货工单
+POST http://localhost:9005/task/create
+Content-Type: {{contentType}}
+token: {{tokenValue}}
+
+{
+	"taskName":"传智补货测试工单",
+	"createType":1,
+	"innerCode":"037900005",
+	"userId":1,
+	"assignorId":2,
+	"productType":2,
+	"desc":"这是一个补货测试工单",
+	"expect":"2019-12-01",
+	"details":[
+		{
+			"channelCode":"1-1",
+			"expectCapacity":10
+		},
+		{
+			"channelCode":"1-2",
+			"expectCapacity":10
+		}
+		]
+}
+
+###

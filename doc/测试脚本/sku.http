@@ -1,0 +1,43 @@
+@hostname = 172.17.0.87
+#lkd-java.itheima.net
+#47.92.101.139
+@port=9007
+@contentType=application/json;charset=utf-8
+
+@tokenValue=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJsa2QiLCJpYXQiOjE2MDY0NjkyMDEsInVzZXJOYW1lIjoi5byg5LiJIiwibW9iaWxlIjoiMTM1NTIwNDcxODciLCJ1c2VySWQiOjQsInJvbGVDb2RlIjoiMTAwMiIsInJlZ2lvbklkIjoiMSIsImxvZ2luVHlwZSI6MSwiZXhwIjoxNjA2NDY5MjAxfQ.7oL3ittMztLibIDCEvnhizEK8zxWiecQgL69BRc9PEc
+
+
+#####根据Id获取商品######
+GET http://{{hostname}}:{{port}}/vm-service/sku/1 HTTP/1.1
+Authorization: {{tokenValue}}
+Content-Type: {{contentType}}
+
+#######创建商品#########
+
+POST http://{{hostname}}:{{port}}/vm-service/sku HTTP/1.1
+Authorization: {{tokenValue}}
+Content-Type: {{contentType}}
+
+{
+    "skuName":"test",
+    "skuImage":"http://lkd2-java.itheima.net/image/Coca-Cola.jpg",
+    "price":500,
+    "brandName":"可口可乐",
+    "classId":1,
+    "unit":"500ML"
+}
+
+#######更新商品######
+PUT http://{{hostname}}:{{port}}/vm-service/sku/1 HTTP/1.1
+Authorization: {{tokenValue}}
+Content-Type: {{contentType}}
+
+{
+    "price":550,
+    "unit":"550ML"
+}
+
+###搜索#####
+GET http://{{hostname}}:{{port}}/vm-service/sku/search HTTP/1.1
+Authorization: {{tokenValue}}
+Content-Type: {{contentType}}
