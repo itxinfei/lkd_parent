@@ -1,0 +1,90 @@
+// TODO: 可以参考dialog.scss写的更优雅些
+// TODO: 对话框上下居中
+.el-dialog {
+  border-radius: 10px;
+  
+  .el-dialog__header {
+    border-bottom: none !important;
+
+    .el-dialog__title {
+      line-height: 22px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  .el-dialog__body {
+    padding: 20px 20px 30px;
+    color: $--color-text-secondary;
+
+    .el-form-item {
+      margin-bottom: 20px;
+
+      .el-form-item__label {
+        line-height: 36px;
+      }
+  
+      .el-form-item__content {
+        width: 396px;
+        line-height: 36px;
+
+        // 对话框里输入框样式
+        .el-input {
+          .el-input__inner {
+            height: 36px;
+            line-height: 36px;
+          }
+
+          .el-input__icon {
+            line-height: 36px;
+          }
+        }
+  
+        // 对话框里按钮样式
+        .el-button {
+          padding-top: 6px;
+          padding-bottom: 6px;
+        }
+  
+        // 对话框里文本域样式
+        .el-textarea {
+          .el-textarea__inner {
+            height: 82px;
+          }
+        }
+
+        // 对话框里计数器样式
+        .el-input-number {
+          width: 396px;
+          line-height: 36px;
+        }
+
+        .el-input-number.is-controls-right .el-input-number__increase, .el-input-number.is-controls-right .el-input-number__decrease {
+          line-height: 17px;
+        }
+      }
+    }
+
+    .el-form-item:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .el-dialog__footer {
+    padding-top: 0px;
+    padding-bottom: 40px;
+    
+    .dialog-footer {
+      padding-top: 0;
+      text-align: center;
+  
+      .el-button {
+        display: inline-block;
+      }
+      
+      .el-button + .el-button {
+        margin-left: 34px !important;
+      }
+    }
+  }
+}

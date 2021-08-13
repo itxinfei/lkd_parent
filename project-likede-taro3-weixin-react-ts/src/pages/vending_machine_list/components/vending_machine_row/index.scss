@@ -1,0 +1,68 @@
+.vending-machine-row {
+  height: 100%;
+
+  .name {
+    margin-right: 19px;
+    font-size: 28px;
+    font-weight: 600;
+    color: rgba(5, 3, 4, 1);
+  }
+
+  .split {
+    width: 1px;
+    height: 24px;
+    margin-right: 17px;
+    opacity: 0.2;
+    background: rgba(147, 146, 146, 1);
+  }
+
+  .icon {
+    width: 19px;
+    height: 24px;
+    margin-right: 13px;
+  }
+
+  .distance {
+    font-size: 24px;
+    color: rgba(5, 3, 4, 1);
+  }
+
+  .addr {
+    margin-top: 28px;
+    font-size: 24px;
+    color: rgba(132, 132, 132, 1);
+  }
+
+  .code {
+    margin-top: 30px;
+    font-size: 24px;
+    color: rgba(132, 132, 132, 1);
+  }
+
+  // TODO: width不应该写成固定值，因为字数是变的
+  .type {
+    width: 87px;
+    height: 34px;
+    line-height: 34px;
+    margin-left: 15px;
+    background: rgba(221, 237, 255, 1);
+    border-radius: 17px;
+    text-align: center;
+    font-size: 20px;
+    color: rgba(1, 82, 173, 1);
+  }
+
+  .go {
+    font-size: 24px;
+    color: rgba(132, 132, 132, 1);
+
+    .img {
+      width: 48px;
+      height: 48px;
+    }
+
+    .tips {
+      margin-top: 13px;
+    }
+  }
+}

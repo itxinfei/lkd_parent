@@ -1,0 +1,25 @@
+// TODO: 可以参考pagination.scss写的更优雅些
+.el-pagination {
+  display: flex;
+  padding: 0;
+}
+
+.el-pagination__total {
+  flex: 1;
+  font-size: 16px !important;
+  color: #DBDFE5 !important;
+}
+
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .btn-next {
+  width: 70px;
+  height: 32px;
+  margin: 0 16px;
+  border-radius: 2px;
+  background-color: #D5DDF8;
+}
+
+.el-pagination.is-background .btn-prev:disabled,
+.el-pagination.is-background .btn-next:disabled {
+  background: #edf0f9;
+}

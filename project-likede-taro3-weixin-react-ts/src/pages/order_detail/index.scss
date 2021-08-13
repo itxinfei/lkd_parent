@@ -1,0 +1,51 @@
+page {
+  background-color: rgba(245, 245, 245, 1);
+}
+
+.order-detail {
+  padding-top: 26px;
+
+  .order-title {
+    padding: 28px 0 26px 40px;
+    opacity: 0.58;
+    font-size: 24px;
+    color: rgba(5, 3, 4, 1);
+  }
+
+  .order-content {
+    background-color: rgba(255, 255, 255, 1);
+
+    .item {
+      width: 688px;
+      height: 102px;
+      margin: 0 auto;
+      border-bottom: 1px solid rgba(237, 237, 237, 1);
+
+      .left {
+        font-size: 28px;
+        color: rgba(102, 102, 102, 1);
+      }
+
+      .right {
+        font-size: 26px;
+        color: rgba(44, 44, 44, 1);
+      }
+
+      .wechat-pay-img {
+        width: 36px;
+        height: 31px;
+        margin-right: 13px;
+      }
+    }
+  }
+
+  .tips {
+    margin-top: 195px;
+    font-size: 24px;
+    color: rgba(147, 146, 146, 1);
+
+    .telephone {
+      margin-top: 26px;
+    }
+  }
+}

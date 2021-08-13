@@ -1,0 +1,374 @@
+[
+  {
+    "index": 0,
+    "name": "售货机",
+    "desc": null,
+    "add_time": 1602558519,
+    "up_time": 1602558519,
+    "list": [
+      {
+        "query_path": {
+          "path": "/microapp-api/vm/sku/:innerCode/:skuId",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 134568,
+        "method": "GET",
+        "catid": 31793,
+        "title": "扫码获取售货机商品详情",
+        "path": "/microapp-api/vm/sku/:innerCode/:skuId",
+        "project_id": 1265,
+        "req_params": [
+          {
+            "_id": "5fa9f580ccf53300184f8cb9",
+            "name": "innerCode",
+            "desc": ""
+          },
+          {
+            "_id": "5fa9f580ccf53300184f8cb8",
+            "name": "skuId",
+            "desc": ""
+          }
+        ],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5fa9f580ccf53300184f8cba",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"skuId\":{\"type\":\"string\",\"description\":\"商品Id\",\"mock\":{\"mock\":\"@id\"}},\"skuName\":{\"type\":\"string\",\"description\":\"商品名称\",\"enum\":[\"可口可乐\",\"康师傅冰红茶\",\"统一阿萨姆奶茶\",\"青梅绿茶\",\"冰糖雪梨\",\"怡宝\",\"100橙汁自然纯\",\"茉莉花茶\",\"星巴克\"]},\"price\":{\"type\":\"integer\",\"description\":\"商品原价\",\"enum\":[200,500,800,1000,1500]},\"realPrice\":{\"type\":\"integer\",\"description\":\"商品售价\",\"enum\":[200,500,800,1000,1500]},\"capacity\":{\"type\":\"integer\",\"description\":\"余量\",\"minimum\":0,\"maximum\":10},\"image\":{\"type\":\"string\",\"description\":\"商品图片url\",\"enum\":[\"http://172.17.0.87:9001/image/可口可乐.png\",\"http://172.17.0.87:9001/image/康师傅冰红茶.png\",\"http://172.17.0.87:9001/image/统一阿萨姆奶茶.png\",\"http://172.17.0.87:9001/image/青梅绿茶.png\",\"http://172.17.0.87:9001/image/冰糖雪梨.png\",\"http://172.17.0.87:9001/image/怡宝.png\",\"http://172.17.0.87:9001/image/100橙汁自然纯.png\",\"http://172.17.0.87:9001/image/茉莉花茶.png\",\"http://172.17.0.87:9001/image/星巴克.png\"]},\"unit\":{\"type\":\"string\",\"description\":\"净含量\",\"enum\":[\"330ML\",\"500ML\",\"600ML\"]},\"addr\":{\"type\":\"string\",\"description\":\"设备地址\",\"enum\":[\"金燕龙办公楼4楼\"]},\"innerCode\":{\"type\":\"string\",\"description\":\"设备编号\",\"enum\":[\"ZX20190403003\"]}},\"required\":[\"skuId\",\"skuName\",\"price\",\"realPrice\",\"capacity\",\"image\",\"unit\",\"addr\",\"innerCode\"]}",
+        "uid": 784,
+        "add_time": 1602559077,
+        "up_time": 1604973952,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/microapp-api/vm/search",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 134554,
+        "method": "POST",
+        "catid": 31793,
+        "title": "搜索附近售货机",
+        "path": "/microapp-api/vm/search",
+        "project_id": 1265,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 784,
+        "add_time": 1602558591,
+        "up_time": 1605086466,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5fabad02ccf53300184f8d46",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"lat\":{\"type\":\"number\",\"description\":\"坐标点纬度\"},\"lon\":{\"type\":\"number\",\"description\":\"坐标点经度\"},\"distance\":{\"type\":\"integer\",\"description\":\"搜索半径,单位:千米\"}},\"required\":[\"lat\",\"lon\",\"distance\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"location\":{\"type\":\"string\",\"description\":\"经纬度坐标位置(\\\"123,30\\\")\",\"enum\":[\"116.396685,39.912221\"]},\"innerCode\":{\"type\":\"string\",\"description\":\"售货机编号\",\"enum\":[\"4883545070193627335\"]},\"nodeName\":{\"type\":\"string\",\"description\":\"点位名称\",\"enum\":[\"故宫博物院-56号自动售卖机\"]},\"addr\":{\"type\":\"string\",\"description\":\"详细地址\",\"enum\":[\"北京市东城区景山前街4号故宫博物院内\"]},\"distance\":{\"type\":\"integer\",\"description\":\"直线距离(单位米)\",\"minimum\":5000,\"maximum\":10000},\"typeName\":{\"type\":\"string\",\"description\":\"售货机类型名\",\"enum\":[\"饮料机\",\"零食机\"]}},\"required\":[\"location\",\"innerCode\",\"nodeName\",\"addr\",\"distance\",\"typeName\"]},\"minItems\":9,\"maxItems\":9}"
+      },
+      {
+        "query_path": {
+          "path": "/microapp-api/vm/skuList/:innerCode",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 134561,
+        "method": "GET",
+        "catid": 31793,
+        "title": "获取售货机商品列表",
+        "path": "/microapp-api/vm/skuList/:innerCode",
+        "project_id": 1265,
+        "req_params": [
+          {
+            "_id": "5fa9f5c0ccf53300184f8cbb",
+            "name": "innerCode",
+            "desc": ""
+          }
+        ],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5fa9f5c0ccf53300184f8cbc",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"skuId\":{\"type\":\"string\",\"description\":\"商品Id\",\"mock\":{\"mock\":\"@id\"}},\"skuName\":{\"type\":\"string\",\"description\":\"商品名称\",\"enum\":[\"可口可乐\",\"康师傅冰红茶\",\"统一阿萨姆奶茶\",\"青梅绿茶\",\"冰糖雪梨\",\"怡宝\",\"100橙汁自然纯\",\"茉莉花茶\",\"星巴克\"]},\"price\":{\"type\":\"integer\",\"description\":\"商品原价\",\"enum\":[200,500,800,1000,1500]},\"realPrice\":{\"type\":\"integer\",\"description\":\"商品售价\",\"enum\":[200,500,800,1000,1500]},\"capacity\":{\"type\":\"integer\",\"description\":\"余量\",\"minimum\":0,\"maximum\":10},\"image\":{\"type\":\"string\",\"description\":\"商品图片url\",\"enum\":[\"https://lkd2-java.itheima.net/image/可口可乐.png\",\"https://lkd2-java.itheima.net/image/康师傅冰红茶.png\",\"https://lkd2-java.itheima.net/image/统一阿萨姆奶茶.png\",\"https://lkd2-java.itheima.net/image/青梅绿茶.png\",\"https://lkd2-java.itheima.net/image/冰糖雪梨.png\",\"https://lkd2-java.itheima.net/image/怡宝.png\",\"https://lkd2-java.itheima.net/image/100橙汁自然纯.png\",\"https://lkd2-java.itheima.net/image/茉莉花茶.png\",\"https://lkd2-java.itheima.net/image/星巴克.png\"]},\"unit\":{\"type\":\"string\",\"description\":\"净含量\",\"enum\":[\"330ML\",\"500ML\",\"600ML\"]}},\"required\":[\"skuId\",\"skuName\",\"price\",\"realPrice\",\"capacity\",\"image\",\"unit\"]},\"minItems\":15,\"maxItems\":15}",
+        "uid": 784,
+        "add_time": 1602558899,
+        "up_time": 1604974016,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "订单支付",
+    "desc": null,
+    "add_time": 1602559583,
+    "up_time": 1602559583,
+    "list": [
+      {
+        "query_path": {
+          "path": "/microapp-api/order/cancelPay/:innerCode/:orderNo",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 134603,
+        "method": "GET",
+        "catid": 31802,
+        "title": "取消支付",
+        "path": "/microapp-api/order/cancelPay/:innerCode/:orderNo",
+        "project_id": 1265,
+        "req_params": [
+          {
+            "_id": "5fa90e81ccf53300184f8c55",
+            "name": "innerCode",
+            "desc": "设备编号"
+          },
+          {
+            "_id": "5fa90e81ccf53300184f8c54",
+            "name": "orderNo",
+            "desc": "订单编号"
+          }
+        ],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5fa90e81ccf53300184f8c56",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"properties\":{}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"innerCode\":{\"type\":\"string\",\"description\":\"售货机编号\"},\"jsCode\":{\"type\":\"string\",\"description\":\"小程序端jscode\"},\"skuId\":{\"type\":\"string\",\"description\":\"商品id\"}},\"required\":[\"innerCode\",\"jsCode\",\"skuId\"]}",
+        "req_body_type": "json",
+        "uid": 784,
+        "add_time": 1602570880,
+        "up_time": 1604914817,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/microapp-api/order/openid/:jsCode",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 134582,
+        "method": "GET",
+        "catid": 31802,
+        "title": "获取openId",
+        "path": "/microapp-api/order/openid/:jsCode",
+        "project_id": 1265,
+        "req_params": [
+          {
+            "_id": "5fa90e70ccf53300184f8c4b",
+            "name": "jsCode",
+            "desc": ""
+          }
+        ],
+        "res_body_type": "json",
+        "uid": 784,
+        "add_time": 1602559628,
+        "up_time": 1604914800,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"string\",\"description\":\"openId\",\"mock\":{\"mock\":\"@id\"}}"
+      },
+      {
+        "query_path": {
+          "path": "/microapp-api/order/search",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 134596,
+        "method": "GET",
+        "catid": 31802,
+        "title": "订单搜索",
+        "path": "/microapp-api/order/search",
+        "project_id": 1265,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5fa9f6cfccf53300184f8cc2",
+            "name": "pageIndex",
+            "desc": "当前页码"
+          },
+          {
+            "required": "0",
+            "_id": "5fa9f6cfccf53300184f8cc1",
+            "name": "pageSize",
+            "example": "",
+            "desc": "当前页数据条数"
+          },
+          {
+            "required": "0",
+            "_id": "5fa9f6cfccf53300184f8cc0",
+            "name": "orderNo",
+            "example": "",
+            "desc": "订单编号"
+          },
+          {
+            "required": "0",
+            "_id": "5fa9f6cfccf53300184f8cbf",
+            "name": "openId",
+            "example": "",
+            "desc": "微信用户openId"
+          },
+          {
+            "required": "0",
+            "_id": "5fa9f6cfccf53300184f8cbe",
+            "name": "startDate",
+            "example": "2020-01-01",
+            "desc": "开始日期"
+          },
+          {
+            "required": "0",
+            "_id": "5fa9f6cfccf53300184f8cbd",
+            "name": "endDate",
+            "example": "2020-02-01",
+            "desc": "结束日期(日期是按照大于等于开始日期且小于等于结束日期为条件进行查询的)"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5fa9f6cfccf53300184f8cc3",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"订单id\",\"mock\":{\"mock\":\"@id\"}},\"orderNo\":{\"type\":\"string\",\"description\":\"订单编号\",\"enum\":[\"20190924001234\"]},\"innerCode\":{\"type\":\"string\",\"description\":\"设备编号\",\"enum\":[\"ZX20190403003\"]},\"addr\":{\"type\":\"string\",\"description\":\"点位地址\",\"enum\":[\"金燕龙办公楼4楼\"]},\"skuId\":{\"type\":\"string\",\"description\":\"商品Id\",\"mock\":{\"mock\":\"@id\"}},\"skuName\":{\"type\":\"string\",\"description\":\"商品名称\",\"enum\":[\"可口可乐500ml\"]},\"status\":{\"type\":\"integer\",\"description\":\"//订单状态:0-未支付;1-支付完成;2-出货成功;3-出货失败;4-已失效\",\"enum\":[0,1,2,3,4]},\"amount\":{\"type\":\"integer\",\"description\":\"支付金额\",\"enum\":[100,200,300,400]},\"payType\":{\"type\":\"integer\",\"description\":\"支付类型，1支付宝 2微信\",\"enum\":[1]},\"payStatus\":{\"type\":\"integer\",\"description\":\"支付状态，0-未支付;1-支付完成;2-退款中;3-退款完成\",\"enum\":[0,1,2]},\"cancelDesc\":{\"type\":\"string\",\"description\":\"取消原因\"},\"createTime\":{\"type\":\"string\",\"description\":\"订单时间\",\"mock\":{\"mock\":\"@datetime\"}}},\"required\":[\"id\",\"orderNo\",\"innerCode\",\"addr\",\"skuId\",\"skuName\",\"status\",\"amount\",\"payType\",\"payStatus\",\"createTime\",\"cancelDesc\"]},\"minItems\":10,\"maxItems\":10}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"innerCode\":{\"type\":\"string\",\"description\":\"售货机编号\"},\"jsCode\":{\"type\":\"string\",\"description\":\"小程序端jscode\"},\"skuId\":{\"type\":\"string\",\"description\":\"商品id\"}},\"required\":[\"innerCode\",\"jsCode\",\"skuId\"]}",
+        "req_body_type": "json",
+        "uid": 784,
+        "add_time": 1602569021,
+        "up_time": 1604974287,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/microapp-api/order/requestPay",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 134589,
+        "method": "POST",
+        "catid": 31802,
+        "title": "请求支付",
+        "path": "/microapp-api/order/requestPay",
+        "project_id": 1265,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5fa90e76ccf53300184f8c4c",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"string\",\"description\":\"appId:\\\"\\\",package:prepay_id,\\\"signType\\\",paySign,微信支付4要素，方便调用呼起微信支付,orderNo:订单号\"}",
+        "uid": 784,
+        "add_time": 1602568640,
+        "up_time": 1604914806,
+        "__v": 0,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"innerCode\":{\"type\":\"string\",\"description\":\"售货机编号\"},\"jsCode\":{\"type\":\"string\",\"description\":\"小程序端jscode\"},\"skuId\":{\"type\":\"string\",\"description\":\"商品id\"}},\"required\":[\"innerCode\",\"jsCode\",\"skuId\"]}",
+        "req_body_type": "json"
+      }
+    ]
+  }
+]

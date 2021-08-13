@@ -1,0 +1,807 @@
+[
+  {
+    "index": 0,
+    "name": "公共分类",
+    "desc": "公共分类",
+    "add_time": 1605591388,
+    "up_time": 1605591388,
+    "list": [
+      {
+        "query_path": {
+          "path": "/api/user-service/partner/updatePwd/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 141246,
+        "method": "PUT",
+        "catid": 32333,
+        "title": "修改密码",
+        "path": "/api/user-service/partner/updatePwd/:id",
+        "project_id": 1313,
+        "req_params": [
+          {
+            "_id": "5fe19f76ccf53300184fd359",
+            "name": "id",
+            "desc": "合作商Id"
+          }
+        ],
+        "res_body_type": "json",
+        "uid": 784,
+        "add_time": 1608621851,
+        "up_time": 1608621942,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5fe19f76ccf53300184fd35a",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"password\":{\"type\":\"string\",\"description\":\"旧密码\"},\"newPassword\":{\"type\":\"string\",\"description\":\"新密码\"}},\"required\":[\"password\",\"newPassword\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"boolean\"}"
+      },
+      {
+        "query_path": {
+          "path": "/api/vm-service/sku/fileUpload",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 139979,
+        "method": "POST",
+        "catid": 32333,
+        "title": "图片上传",
+        "path": "/api/vm-service/sku/fileUpload",
+        "project_id": 1313,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5fd96f39ccf53300184fc14a",
+            "name": "Content-Type",
+            "value": "multipart/form-data"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "1",
+            "_id": "5fd96f39ccf53300184fc14b",
+            "name": "fileName",
+            "type": "file"
+          }
+        ],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "form",
+        "res_body": "{\"type\":\"string\",\"description\":\"图片路径\"}",
+        "uid": 1102,
+        "add_time": 1608600194,
+        "up_time": 1608600194,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/api/user-service/user/imageCode/:clientToken",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 139986,
+        "method": "GET",
+        "catid": 32333,
+        "title": "图片验证码",
+        "path": "/api/user-service/user/imageCode/:clientToken",
+        "project_id": 1313,
+        "req_params": [
+          {
+            "_id": "5fceea00ccf53300184fa81d",
+            "name": "clientToken",
+            "desc": "请求随机数"
+          }
+        ],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5fceea00ccf53300184fa81e",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"string\",\"description\":\"验证码图片流\",\"mock\":{\"mock\":\"@imageData\"}}",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{}}",
+        "req_body_type": "json",
+        "uid": 1102,
+        "add_time": 1608600195,
+        "up_time": 1608600195,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/api/user-service/partner/partnerInfo/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 141260,
+        "method": "PUT",
+        "catid": 32333,
+        "title": "更新合作商信息",
+        "path": "/api/user-service/partner/partnerInfo/:id",
+        "project_id": 1313,
+        "req_params": [
+          {
+            "_id": "5fe2a4deccf53300184fd39d",
+            "name": "id",
+            "desc": ""
+          }
+        ],
+        "res_body_type": "json",
+        "uid": 784,
+        "add_time": 1608688714,
+        "up_time": 1608688862,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5fe2a4deccf53300184fd39e",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"name\":{\"type\":\"string\",\"description\":\"合作商名称\"},\"email\":{\"type\":\"string\",\"description\":\"邮箱\"},\"province\":{\"type\":\"string\",\"description\":\"省\"},\"city\":{\"type\":\"string\"},\"county\":{\"type\":\"string\",\"description\":\"区县\"},\"addr\":{\"type\":\"string\",\"description\":\"详细地址\"},\"phone\":{\"type\":\"string\",\"description\":\"联系电话\"}},\"required\":[\"name\",\"email\",\"city\",\"province\",\"county\",\"addr\",\"phone\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"boolean\"}"
+      },
+      {
+        "query_path": {
+          "path": "/api/user-service/partner/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 141253,
+        "method": "GET",
+        "catid": 32333,
+        "title": "根据Id获取合作商详情",
+        "path": "/api/user-service/partner/:id",
+        "project_id": 1313,
+        "req_params": [
+          {
+            "_id": "5fe2a417ccf53300184fd39b",
+            "name": "id",
+            "desc": ""
+          }
+        ],
+        "res_body_type": "json",
+        "uid": 784,
+        "add_time": 1608687580,
+        "up_time": 1608688663,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"contact\":{\"type\":\"string\",\"description\":\"联系人\"},\"mobile\":{\"type\":\"string\",\"description\":\"手机号\"},\"phone\":{\"type\":\"string\",\"description\":\"联系电话\"},\"email\":{\"type\":\"string\",\"description\":\"邮箱地址\"},\"city\":{\"type\":\"string\",\"description\":\"城市\"},\"county\":{\"type\":\"string\",\"description\":\"区县\"},\"addr\":{\"type\":\"string\",\"description\":\"详细地址\"},\"ratio\":{\"type\":\"integer\",\"description\":\"分成比例\"}},\"required\":[\"id\",\"name\",\"contact\",\"mobile\",\"phone\",\"email\",\"city\",\"county\",\"addr\",\"ratio\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/api/user-service/user/login",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 139993,
+        "method": "POST",
+        "catid": 32333,
+        "title": "登录",
+        "path": "/api/user-service/user/login",
+        "project_id": 1313,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5fe15114ccf53300184fd226",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"loginName\":{\"type\":\"string\",\"description\":\"用户名(后台登录需要提供)\"},\"password\":{\"type\":\"string\",\"description\":\"密码(后台或代理商登录需要提供)\"},\"mobile\":{\"type\":\"string\",\"description\":\"客户端登录需要提供\"},\"code\":{\"type\":\"string\",\"description\":\"验证码\"},\"clientToken\":{\"type\":\"string\",\"description\":\"客户端请求验证码的token，两个后台登录需要提供\"},\"loginType\":{\"type\":\"integer\",\"description\":\"登录类型 0：后台；1：运营运维端；2：合作商后台\"}},\"required\":[\"loginName\",\"password\",\"mobile\",\"code\",\"clientToken\",\"loginType\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"userId\":{\"type\":\"integer\"},\"userName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@cname\"}},\"roleCode\":{\"type\":\"string\",\"description\":\"角色code\"},\"success\":{\"type\":\"boolean\",\"description\":\"是否成功\"},\"msg\":{\"type\":\"string\"},\"regionId\":{\"type\":\"string\",\"description\":\"区域Id(运营、运维客户端专用)\"},\"isRepair\":{\"type\":\"boolean\",\"description\":\"是否是维修员(运营、运维客户端专用)\"},\"token\":{\"type\":\"string\",\"description\":\"jwt令牌\"}},\"required\":[\"userId\",\"userName\",\"roleCode\",\"success\",\"msg\",\"regionId\",\"isRepair\",\"token\"]}",
+        "uid": 1102,
+        "add_time": 1608600195,
+        "up_time": 1608601876,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/api/user-service/partner/resetPwd/:id",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 140000,
+        "method": "GET",
+        "catid": 32333,
+        "title": "重置合作商密码",
+        "path": "/api/user-service/partner/resetPwd/:id",
+        "project_id": 1313,
+        "req_params": [
+          {
+            "_id": "5fc0acb1ccf53300184f96e7",
+            "name": "id",
+            "desc": "合作商Id"
+          }
+        ],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "",
+        "uid": 1102,
+        "add_time": 1608600195,
+        "up_time": 1608600195,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "工作台",
+    "desc": null,
+    "add_time": 1605591422,
+    "up_time": 1605591422,
+    "list": [
+      {
+        "query_path": {
+          "path": "/api/order-service/report/collectReport/:partnerId/:start/:end",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 136318,
+        "method": "GET",
+        "catid": 32342,
+        "title": "一定日期之内的营收统计",
+        "path": "/api/order-service/report/collectReport/:partnerId/:start/:end",
+        "project_id": 1313,
+        "req_params": [
+          {
+            "_id": "5fb486e1ccf53300184f8db0",
+            "name": "partnerId",
+            "desc": "合作商Id"
+          },
+          {
+            "_id": "5fb486e1ccf53300184f8daf",
+            "name": "start",
+            "example": "2020-11-01",
+            "desc": "开始日期"
+          },
+          {
+            "_id": "5fb486e1ccf53300184f8dae",
+            "name": "end",
+            "example": "2020-11-30",
+            "desc": "截止日期"
+          }
+        ],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"xAxis\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"description\":\"日期数据:2020-11-01\"},\"description\":\"X轴数据(24小时)\"},\"series\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"},\"description\":\"Y轴数据\"}},\"required\":[\"xAxis\",\"series\"]}",
+        "uid": 784,
+        "add_time": 1605666397,
+        "up_time": 1605666529,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/api/order-service/report/top12Collect/:partnerId",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 136325,
+        "method": "GET",
+        "catid": 32342,
+        "title": "合作商获取最近12条分账信息",
+        "path": "/api/order-service/report/top12Collect/:partnerId",
+        "project_id": 1313,
+        "req_params": [
+          {
+            "_id": "5fcd8db0ccf53300184fa27e",
+            "name": "partnerId",
+            "desc": "合作商Id"
+          }
+        ],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"nodeName\":{\"type\":\"string\",\"description\":\"点位名称\"},\"totalBill\":{\"type\":\"integer\",\"description\":\"分账金额(分为单位)\"},\"orderCount\":{\"type\":\"integer\",\"description\":\"订单数\"},\"date\":{\"type\":\"string\",\"description\":\"统计日期\"}},\"required\":[\"nodeName\",\"totalBill\",\"orderCount\",\"date\"]}}",
+        "uid": 784,
+        "add_time": 1605666581,
+        "up_time": 1607306672,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/api/order-service/report/currentDayCollect/:partnerId",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 136276,
+        "method": "GET",
+        "catid": 32342,
+        "title": "当日营收统计",
+        "path": "/api/order-service/report/currentDayCollect/:partnerId",
+        "project_id": 1313,
+        "req_params": [
+          {
+            "_id": "5fcf1b17ccf53300184fa826",
+            "name": "partnerId",
+            "desc": "合作商Id"
+          }
+        ],
+        "res_body_type": "json",
+        "uid": 784,
+        "add_time": 1605591501,
+        "up_time": 1607408407,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"xAxis\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"description\":\"小时数据:12,13\"},\"description\":\"X轴数据(24小时)\"},\"series\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"},\"description\":\"Y轴数据\"}},\"required\":[\"xAxis\",\"series\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/api/order-service/report/amountInfot/:partnerId/:start/:end",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 136304,
+        "method": "GET",
+        "catid": 32342,
+        "title": "本周/月总收入情况",
+        "path": "/api/order-service/report/amountInfot/:partnerId/:start/:end",
+        "project_id": 1313,
+        "req_params": [
+          {
+            "_id": "5fcb4da4ccf53300184fa249",
+            "name": "partnerId",
+            "desc": "合作商Id"
+          },
+          {
+            "_id": "5fcb4da4ccf53300184fa248",
+            "name": "start",
+            "example": "2020-01-01 12:00:00",
+            "desc": "开始时间"
+          },
+          {
+            "_id": "5fcb4da4ccf53300184fa247",
+            "name": "end",
+            "desc": ""
+          }
+        ],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"currentAmount\":{\"type\":\"string\",\"description\":\"本周总收入\"},\"percent\":{\"type\":\"integer\",\"description\":\"同比\"}},\"required\":[\"currentAmount\",\"percent\"]}",
+        "uid": 784,
+        "add_time": 1605591960,
+        "up_time": 1607159204,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/api/order-service/report/orderCountInfo/:partnerId/:start/:end",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 136297,
+        "method": "GET",
+        "catid": 32342,
+        "title": "本周/月订单数情况",
+        "path": "/api/order-service/report/orderCountInfo/:partnerId/:start/:end",
+        "project_id": 1313,
+        "req_params": [
+          {
+            "_id": "5fcb4d9bccf53300184fa246",
+            "name": "partnerId",
+            "desc": "合作商Id"
+          },
+          {
+            "_id": "5fcb4d9bccf53300184fa245",
+            "name": "start",
+            "example": "2020-01-01 12:00:00",
+            "desc": "开始时间"
+          },
+          {
+            "_id": "5fcb4d9bccf53300184fa244",
+            "name": "end",
+            "example": "2020-01-01 23:59:59",
+            "desc": "结束时间"
+          }
+        ],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"currentAmount\":{\"type\":\"string\",\"description\":\"本周订单数\"},\"percent\":{\"type\":\"integer\",\"description\":\"同比\"}},\"required\":[\"currentAmount\",\"percent\"]}",
+        "uid": 784,
+        "add_time": 1605591789,
+        "up_time": 1607159195,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/api/order-service/report/orderAmount",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 136290,
+        "method": "GET",
+        "catid": 32342,
+        "title": "获取一定时间范围之内的收入",
+        "path": "/api/order-service/report/orderAmount",
+        "project_id": 1313,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5feac133ccf53300184ff790",
+            "name": "partnerId",
+            "desc": "合作商Id"
+          },
+          {
+            "required": "1",
+            "_id": "5feac133ccf53300184ff78f",
+            "name": "start",
+            "example": "2020-01-01 00:00:00",
+            "desc": "开始日期时间"
+          },
+          {
+            "required": "1",
+            "_id": "5feac133ccf53300184ff78e",
+            "name": "end",
+            "example": "2020-01-01 00:00:00",
+            "desc": "结束日期时间"
+          },
+          {
+            "required": "0",
+            "_id": "5feac133ccf53300184ff78d",
+            "name": "innerCode",
+            "example": "",
+            "desc": "售货机编号"
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"string\"}",
+        "uid": 784,
+        "add_time": 1605591747,
+        "up_time": 1609220403,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/api/order-service/report/orderCount",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 141239,
+        "method": "GET",
+        "catid": 32342,
+        "title": "获取一定时间范围之内的订单总数",
+        "path": "/api/order-service/report/orderCount",
+        "project_id": 1313,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 1102,
+        "add_time": 1608602568,
+        "up_time": 1609150217,
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5fe9af09ccf53300184ff43f",
+            "name": "partnerId",
+            "desc": "合作商Id"
+          },
+          {
+            "required": "1",
+            "_id": "5fe9af09ccf53300184ff43e",
+            "name": "start",
+            "example": "2020-01-01 00:00:00",
+            "desc": "开始日期时间"
+          },
+          {
+            "required": "1",
+            "_id": "5fe9af09ccf53300184ff43d",
+            "name": "end",
+            "example": "2020-01-01 00:00:00",
+            "desc": "结束日期时间"
+          },
+          {
+            "required": "0",
+            "_id": "5fe9af09ccf53300184ff43c",
+            "name": "innerCode",
+            "example": "",
+            "desc": "售货机编号"
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"string\",\"description\":\"string类型的数字\"}"
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "分账管理",
+    "desc": null,
+    "add_time": 1605667362,
+    "up_time": 1605667362,
+    "list": [
+      {
+        "query_path": {
+          "path": "/api/order-service/report/export/:partnerId/:start/:end",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 136339,
+        "method": "GET",
+        "catid": 32351,
+        "title": "合作商获分账信息导出",
+        "path": "/api/order-service/report/export/:partnerId/:start/:end",
+        "project_id": 1313,
+        "req_params": [
+          {
+            "_id": "5fb4961bccf53300184f8dc8",
+            "name": "partnerId",
+            "desc": ""
+          },
+          {
+            "_id": "5fb4961bccf53300184f8dc7",
+            "name": "start",
+            "desc": ""
+          },
+          {
+            "_id": "5fb4961bccf53300184f8dc6",
+            "name": "end",
+            "desc": ""
+          }
+        ],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5fb4961bccf53300184f8dc9",
+            "name": "nodeName",
+            "desc": "点位名称"
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"properties\":{}}",
+        "uid": 784,
+        "add_time": 1605670352,
+        "up_time": 1605670427,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/api/order-service/report/search/:partnerId",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 136332,
+        "method": "GET",
+        "catid": 32351,
+        "title": "合作商获分账信息查询",
+        "path": "/api/order-service/report/search/:partnerId",
+        "project_id": 1313,
+        "req_params": [
+          {
+            "_id": "5fbf4067ccf53300184f9647",
+            "name": "partnerId",
+            "desc": "合作商id"
+          }
+        ],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "5fbf4067ccf53300184f964c",
+            "name": "pageIndex",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "5fbf4067ccf53300184f964b",
+            "name": "pageSize",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "5fbf4067ccf53300184f964a",
+            "name": "nodeName",
+            "example": "",
+            "desc": "点位名称"
+          },
+          {
+            "required": "1",
+            "_id": "5fbf4067ccf53300184f9649",
+            "name": "start",
+            "example": "2020-11-01",
+            "desc": "开始日期"
+          },
+          {
+            "required": "1",
+            "_id": "5fbf4067ccf53300184f9648",
+            "name": "end",
+            "example": "2020-11-30",
+            "desc": "结束日期"
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"pageIndex\":{\"type\":\"string\"},\"pageSize\":{\"type\":\"string\"},\"totalPage\":{\"type\":\"string\"},\"totalCount\":{\"type\":\"string\"},\"currentPageRecords\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"nodeName\":{\"type\":\"string\",\"description\":\"点位名称\"},\"totalBill\":{\"type\":\"integer\",\"description\":\"分账金额\"},\"orderCount\":{\"type\":\"integer\",\"description\":\"订单数\"},\"date\":{\"type\":\"string\",\"description\":\"日期\"}},\"required\":[\"nodeName\",\"totalBill\",\"orderCount\",\"date\"]}}},\"required\":[\"pageIndex\",\"pageSize\",\"totalPage\",\"totalCount\",\"currentPageRecords\"]}",
+        "uid": 784,
+        "add_time": 1605666736,
+        "up_time": 1606369383,
+        "__v": 0
+      }
+    ]
+  }
+]

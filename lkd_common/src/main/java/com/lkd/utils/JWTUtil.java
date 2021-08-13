@@ -14,9 +14,10 @@ import java.time.ZonedDateTime;
 import java.util.Base64;
 import java.util.Date;
 
-public class JWTUtil{
+public class JWTUtil {
     /**
      * 签发JWT
+     *
      * @param tokenObject
      * @param secret
      * @return
@@ -34,7 +35,7 @@ public class JWTUtil{
                 .setHeaderParam("alg", "HS256")  //加密算法
                 .addClaims(JsonUtil.convertToMap(tokenObject))
                 .setExpiration(Date.from(zdt.toInstant()))  //设置过期时间
-                .signWith(SignatureAlgorithm.HS256,secretKey);  //用密钥签名
+                .signWith(SignatureAlgorithm.HS256, secretKey);  //用密钥签名
 
 
         //生成JWT
@@ -46,7 +47,7 @@ public class JWTUtil{
      */
     public static VerifyResult verifyJwt(String token, String secret) {
         //签名秘钥，和生成的签名的秘钥一模一样
-        SecretKey key =  generalKey(secret);
+        SecretKey key = generalKey(secret);
         try {
 
 //            ZoneId zoneId = ZoneId.systemDefault();
@@ -96,7 +97,7 @@ public class JWTUtil{
     }
 
     @Data
-    public static class VerifyResult{
+    public static class VerifyResult {
         private boolean isValidate;
         /**
          * 5001:token过期;5002:无效token;5003:token校验异常

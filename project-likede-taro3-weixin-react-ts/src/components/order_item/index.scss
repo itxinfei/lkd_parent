@@ -1,0 +1,54 @@
+.order-item {
+  box-sizing: border-box;
+  width: 709px;
+  height: 252px;
+  margin: 0 auto 24px;
+  padding: 0 19px 0 20px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 14px;
+  box-shadow: 0px 3px 24px 0px rgba(0, 0, 0, 0.07);
+
+  .title {
+    height: 72px;
+    border-bottom: 1px solid rgba(245, 245, 245, 1);
+
+    .addr {
+      margin-left: 10px;
+      font-size: 28px;
+      color: rgba(5, 3, 4, 1);
+    }
+
+    .status {
+      margin-right: 10px;
+      font-size: 24px;
+      color: rgba(147, 146, 146, 1);
+    }
+  }
+
+  .left {
+    box-sizing: border-box;
+    height: 179px;
+    padding: 29px 34px 35px 9px;
+    opacity: 0.58;
+    font-size: 24px;
+    color: rgba(5, 3, 4, 1);
+  }
+
+  .right {
+    box-sizing: border-box;
+    height: 179px;
+    padding-top: 29px;
+    padding-bottom: 35px;
+    padding-right: 24px;
+    font-size: 24px;
+    color: rgba(5, 3, 4, 1);
+
+    .amount {
+      color: rgba(239, 116, 42, 1);
+    }
+  }
+}
+
+.order-item:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,47 @@
+.scan {
+  width: 180px;
+  height: 180px;
+  margin: 54px auto 0;
+  background: linear-gradient(
+    rgba(246, 202, 86, 1) 0%,
+    rgba(242, 221, 65, 1) 100%
+  );
+  box-shadow: 0px 5px 21px 0px rgba(244, 209, 79, 0.75);
+  border-radius: 50%;
+
+  .img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .text {
+    margin-top: 21px;
+    font-size: 24px;
+  }
+}
+
+.vending-machine {
+  .title {
+    margin: 50px 0 30px 42px;
+    font-size: 26px;
+  }
+
+  .scroll {
+    box-sizing: border-box;
+    height: 288px;
+    padding-top: 43px;
+    white-space: nowrap;
+    background-image: url('../../assets/images/map.png');
+    background-size: cover;
+  }
+}
+
+.order {
+  margin-bottom: 70px;
+
+  .header {
+    box-sizing: border-box;
+    padding: 30px 53px 53px 42px;
+    font-size: 26px;
+  }
+}

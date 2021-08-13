@@ -4,9 +4,11 @@ import lombok.Data;
 
 /**
  * JWT令牌包装对象
+ *
+ * @author Administrator
  */
 @Data
-public class TokenObject{
+public class TokenObject {
     /**
      * 手机号
      */
@@ -17,8 +19,8 @@ public class TokenObject{
      */
     private Integer userId;
 
-    /**
-     * 用户名称
+    /*
+      用户名称
      */
     //private String userName;
 

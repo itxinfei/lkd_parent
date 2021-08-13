@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class BaseResponse<D> implements Serializable{
+public class BaseResponse<D> implements Serializable {
     private boolean success;
     //异常信息
     private String message;
@@ -23,27 +23,27 @@ public class BaseResponse<D> implements Serializable{
     }
 
 
-    public BaseResponse(D data){
+    public BaseResponse(D data) {
         this();
         this.data = data;
     }
 
-    public BaseResponse(boolean success){
+    public BaseResponse(boolean success) {
         this();
         this.success = success;
-        if(success == false){
+        if (!success) {
             this.message = "操作失败";
             this.code = 300;
         }
     }
 
-    public BaseResponse(boolean success,String msg){
+    public BaseResponse(boolean success, String msg) {
         this(success);
         this.message = msg;
     }
 
-    public BaseResponse(int code,String msg){
-        this(false,msg);
+    public BaseResponse(int code, String msg) {
+        this(false, msg);
         this.code = code;
     }
 }

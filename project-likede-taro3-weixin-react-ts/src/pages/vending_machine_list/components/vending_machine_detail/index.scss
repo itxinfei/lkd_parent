@@ -1,0 +1,29 @@
+.vending-machine-detail {
+  position: relative;
+  box-sizing: border-box;
+  width: 710px;
+  height: 206px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  box-shadow: 5px 9px 21px 6px rgba(220, 220, 220, 0.63);
+  padding-left: 40px;
+  padding-right: 40px;
+
+  .close-img {
+    position: absolute;
+    top: -72px;
+    right: 15px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .close-line {
+    position: absolute;
+    top: -34px;
+    right: 33px;
+    width: 2px;
+    height: 34px;
+    opacity: 0.55;
+    background: rgba(0, 0, 0, 1);
+  }
+}

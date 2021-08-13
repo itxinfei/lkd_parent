@@ -1,5 +1,8 @@
 package com.lkd.common;
 
+/**
+ * @author Administrator
+ */
 public class VMSystem {
     /**
      * 售货机状态：未投放
@@ -67,12 +70,12 @@ public class VMSystem {
     /**
      * 工单类型：维修工单
      */
-    public static final Integer TASK_TYPE_REPAIR= 3;
+    public static final Integer TASK_TYPE_REPAIR = 3;
 
     /**
      * 工单类型：撤机工单
      */
-    public static final Integer TASK_TYPE_REVOKE= 4;
+    public static final Integer TASK_TYPE_REVOKE = 4;
 
     /**
      * 订单状态：创建
@@ -82,21 +85,21 @@ public class VMSystem {
     /**
      * 订单状态：支付完成
      */
-    public static final  Integer ORDER_STATUS_PAYED = 1;
+    public static final Integer ORDER_STATUS_PAYED = 1;
 
     /**
      * 订单状态：出货成功
      */
-    public static final  Integer ORDER_STATUS_VENDOUT_SUCCESS = 2;
+    public static final Integer ORDER_STATUS_VENDOUT_SUCCESS = 2;
     /**
      * 订单状态：出货失败
      */
-    public static final  Integer ORDER_STATUS_VENDOUT_FAIL = 3;
+    public static final Integer ORDER_STATUS_VENDOUT_FAIL = 3;
 
     /**
      * 订单状态：失效
      */
-    public static final  Integer ORDER_STATUS_INVALID = 4;
+    public static final Integer ORDER_STATUS_INVALID = 4;
 
     /**
      * 支付状态：未支付
@@ -121,9 +124,7 @@ public class VMSystem {
     /**
      * 区域工单统计前缀
      */
-    public static  final  String REGION_TASK_KEY_PREF="region.task.";
-
-
+    public static final String REGION_TASK_KEY_PREF = "region.task.";
 
 
 }
