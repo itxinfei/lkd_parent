@@ -7,6 +7,11 @@ import org.springframework.stereotype.Component;
 
 import java.util.Properties;
 
+/**
+ * @Author pangzhao
+ * @Date 2022-2-14 16:46
+ * @Description 图形验证码
+ **/
 @Component
 public class KaptcharConfig {
 

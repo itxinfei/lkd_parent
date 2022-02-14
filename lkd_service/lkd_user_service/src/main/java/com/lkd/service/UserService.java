@@ -19,21 +19,24 @@ public interface UserService extends IService<UserEntity> {
 
     /**
      * 获取所有维修员数量
+     *
      * @return
      */
     Integer getRepairerCount();
 
     /**
      * 分页查询
+     *
      * @param pageIndex
      * @param pageSize
      * @param userName
      * @return
      */
-    Pager<UserEntity> findPage(long pageIndex, long pageSize, String userName,Integer roleId,Boolean isRepair);
+    Pager<UserEntity> findPage(long pageIndex, long pageSize, String userName, Integer roleId, Boolean isRepair);
 
     /**
      * 后台登录
+     *
      * @param req
      * @return
      */
@@ -41,12 +44,14 @@ public interface UserService extends IService<UserEntity> {
 
     /**
      * 发送验证码
+     *
      * @param mobile
      */
     void sendCode(String mobile);
 
     /**
      * 获取某区域下所有运营人员
+     *
      * @param regionId
      * @return
      */
@@ -54,6 +59,7 @@ public interface UserService extends IService<UserEntity> {
 
     /**
      * 获取某区域下所有运维人员
+     *
      * @param regionId
      * @return
      */
@@ -61,14 +67,16 @@ public interface UserService extends IService<UserEntity> {
 
     /**
      * 获取某区域下维修员/运营员总数
+     *
      * @param isRepair
      * @return
      */
-    Integer getCountByRegion(Long regionId,Boolean isRepair);
+    Integer getCountByRegion(Long regionId, Boolean isRepair);
 
 
     /**
      * 查询工作量列表
+     *
      * @param pageIndex
      * @param pageSize
      * @param userName
@@ -76,6 +84,6 @@ public interface UserService extends IService<UserEntity> {
      * @param isRepair
      * @return
      */
-    Pager<UserWork> searchUserWork( Long pageIndex,Long pageSize,String userName, Integer roleId, Boolean isRepair  );
+    Pager<UserWork> searchUserWork(Long pageIndex, Long pageSize, String userName, Integer roleId, Boolean isRepair);
 
 }

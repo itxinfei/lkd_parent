@@ -16,6 +16,7 @@ import java.io.IOException;
 public interface PartnerService extends IService<PartnerEntity> {
     /**
      * 登录
+     *
      * @param req
      * @return
      * @throws IOException
@@ -24,13 +25,15 @@ public interface PartnerService extends IService<PartnerEntity> {
 
     /**
      * 更新合作商
+     *
      * @param
      * @return
      */
-    Boolean modify(Integer id,PartnerReq req);
+    Boolean modify(Integer id, PartnerReq req);
 
     /**
      * 删除
+     *
      * @param id
      * @return
      */
@@ -38,23 +41,26 @@ public interface PartnerService extends IService<PartnerEntity> {
 
     /**
      * 重置密码
+     *
      * @param id
      */
     void resetPwd(Integer id);
 
     /**
      * 查询合作商
+     *
      * @param pageIndex
      * @param pageSize
      * @param name
      * @return
      */
-    Pager<PartnerEntity> search(Long pageIndex,Long pageSize,String name);
+    Pager<PartnerEntity> search(Long pageIndex, Long pageSize, String name);
 
     /**
      * 更新密码
+     *
      * @param req
      * @return
      */
-    Boolean updatePwd(Integer id,PartnerUpdatePwdReq req);
+    Boolean updatePwd(Integer id, PartnerUpdatePwdReq req);
 }

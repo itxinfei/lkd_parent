@@ -11,6 +11,7 @@
 
     <artifactId>lkd_user_service</artifactId>
     <packaging>jar</packaging>
+
     <dependencies>
         <dependency>
             <groupId>com.lkd</groupId>
@@ -44,6 +45,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>

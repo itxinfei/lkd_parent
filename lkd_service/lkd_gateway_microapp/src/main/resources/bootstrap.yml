@@ -1,3 +1,6 @@
+server:
+  port: 9010
+
 spring:
   application:
     name: microapp-gateway
@@ -14,7 +17,7 @@ spring:
         enabled: true
         register: true
         health-check-critical-timeout: 2m #2分钟之后健康检查未通过取消注册
-      host:  192.168.200.128
+      host: 192.168.1.100
       port: 8500
       config:
         enabled: true
@@ -27,5 +30,3 @@ spring:
           enabled: true
           wait-time: 55
           delay: 5000
-server:
-  port: 9010

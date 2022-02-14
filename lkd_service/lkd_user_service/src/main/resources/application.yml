@@ -1,7 +1,7 @@
+server:
+  port: 9006
 spring:
   application:
     name: user-service
 
-server:
-  port: 9006
 

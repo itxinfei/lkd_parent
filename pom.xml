@@ -11,7 +11,7 @@
     <groupId>com.lkd</groupId>
     <artifactId>lkd_parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>lkd_parent</name>
+    <name>立可得2.0</name>
 
     <modules>
         <module>lkd_common</module>
