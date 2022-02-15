@@ -1,7 +1,6 @@
 spring:
   application:
-    name: vm-service
-
+    name: vms-service
 server:
   port: 9004
 

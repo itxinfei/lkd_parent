@@ -8,6 +8,11 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+/**
+ * @Author pangzhao
+ * @Date 2022-2-15 12:25
+ * @Description
+ **/
 @EnableDiscoveryClient
 @EnableCaching
 @EnableConfigurationProperties
@@ -22,6 +27,6 @@ public class VmsServiceApplication {
 
     public static void main(String[] args) {
         //Sentry.init("https://38ddc9b80c144435bd5feeccf4d93078@sentry.itheima.net/14");
-        SpringApplication.run( VmsServiceApplication.class, args);
+        SpringApplication.run(VmsServiceApplication.class, args);
     }
 }

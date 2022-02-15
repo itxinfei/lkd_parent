@@ -39,12 +39,11 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 10000
-
 mqtt:
   client:
     username: admin
     password: public
-    serverURI: tcp://192.168.200.128:1883
+    serverURI: tcp://192.168.1.100:1883
     clientId: monitor.task.${random.int[1000,9999]}
     keepAliveInterval: 10 #连接保持检查周期
     connectionTimeout: 30 #连接超时时间

@@ -8,17 +8,18 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.3.1.RELEASE</version>
     </parent>
+
     <groupId>com.lkd</groupId>
     <artifactId>lkd_parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>立可得2.0</name>
 
     <modules>
         <module>lkd_common</module>
         <module>lkd_service</module>
+        <module>lkd_client</module>
     </modules>
-
-    <packaging>pom</packaging>
 
     <properties>
         <java.version>11</java.version>
@@ -33,7 +34,6 @@
         <java-jwt.version>3.8.1</java-jwt.version>
         <mysql-connector-java.version>8.0.15</mysql-connector-java.version>
     </properties>
-
 
     <dependencyManagement>
         <dependencies>

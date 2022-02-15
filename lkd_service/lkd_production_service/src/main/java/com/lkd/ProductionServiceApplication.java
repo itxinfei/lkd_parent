@@ -12,7 +12,11 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 
-
+/**
+ * @Author pangzhao
+ * @Date 2022-2-15 10:09
+ * @Description
+ **/
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableTransactionManagement
@@ -21,13 +25,14 @@ import org.springframework.web.servlet.HandlerExceptionResolver;
 @EnableScheduling
 @EnableFeignClients
 @EnableAsync
-public class ProductionServiceApplication{
+public class ProductionServiceApplication {
     @Bean
     public HandlerExceptionResolver sentryExceptionResolver() {
         return new io.sentry.spring.SentryExceptionResolver();
     }
+
     public static void main(String[] args) {
 //        Sentry.init("https://38ddc9b80c144435bd5feeccf4d93078@sentry.itheima.net/14");
-        SpringApplication.run( ProductionServiceApplication.class, args);
+        SpringApplication.run(ProductionServiceApplication.class, args);
     }
 }
